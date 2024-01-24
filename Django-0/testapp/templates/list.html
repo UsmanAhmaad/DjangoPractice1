@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        h2{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Details:</h1>
+    {% if name %}
+        <h3>Name : {{name}} </h3>
+    {% endif %} 
+
+
+    {% if age %} 
+        <h3>Age : {{age}} </h3>
+    {% endif %}
+    <hr>
+    <h1>Courses:</h1>
+   <ol>
+        {% for course in courses %}
+            <li><h3>{{course}} </h3></li>
+        {% endfor %}
+   </ol>
+    
+   
+    <br>
+    <h1>First Three:</h1>
+    <ul>
+        {% for course1 in course1 %}
+        <li><h2>{{course1}}</h2></li>
+        {% endfor %}
+    </ul>
+
+    <h1>Last Three:</h1>
+    <ul>
+        {% for course2 in course2 %}
+        <li><h2> {{course2}} </h2></li>
+        {% endfor %}
+    </ul>
+
+    
+    
+
+
+</body>
+</html>
